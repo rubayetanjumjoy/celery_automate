@@ -1,0 +1,69 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %} Securenet Migration {% endblock %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Fiberhome Gateway Administration</a></h1>
+{% endblock %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="/migration">Home</a>
+    &rsaquo; <a href="/securenet_migration">Securenet Migration</a>
+    &rsaquo; <a href="/securenet_migration/{{ url }}/">{{ model }}</a>
+    &rsaquo; Migration
+</div>
+{% endblock %}
+{% block content %}
+{{ block.super }}
+<div>
+    <h2>RES Customer Migration From Securenet To Subscriber DB</h2>
+    <div class="changelist-form-container">
+        <div class="results">
+            <table id="result_list">
+                <thead>
+                <tr>
+                    <th>SF CASE ID</th>
+                    <th>STATUS</th>
+                    <th>MESSAGE</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.sf_case_id }}</td>
+                    <td>{{ item.status }}</td>
+                    <td>{{ item.message }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <div class="submit-row">
+            <div style="float: left">
+                <form action="start_migration"
+                      method="post"
+                      enctype="multipart/form-data"
+                      onsubmit="return confirm('Do you really want to start migration');"
+                >
+                    {% csrf_token %}
+                    <input class="btn btn-primary" value="Start Migration" {% if migration_disabled %} disabled {% endif %} type="submit"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    {% if migration_disabled %}
+        <!-- both steps are disabled -->
+    setInterval(function () {
+        window.location.reload();
+    }, 6000);
+
+    {% endif %}
+
+</script>
+
+{% endblock %}

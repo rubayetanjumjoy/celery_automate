@@ -1,0 +1,21 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\QuaziRubayetAnjumJoy\Desktop\CodeBase\Testing\Celery\promt_automate\automate\tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2237
+Not Found: /
+"GET / HTTP/1.1" 404 2237
+"GET /automate/ HTTP/1.1" 200 36
+C:\Users\QuaziRubayetAnjumJoy\Desktop\CodeBase\Testing\Celery\promt_automate\automate\tasks.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /automate/ HTTP/1.1" 200 36
+C:\Users\QuaziRubayetAnjumJoy\Desktop\CodeBase\Testing\Celery\promt_automate\promt_automate\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /automate/ HTTP/1.1" 200 36
+"GET /automate/ HTTP/1.1" 200 36
+C:\Users\QuaziRubayetAnjumJoy\Desktop\CodeBase\Testing\Celery\promt_automate\promt_automate\settings.py changed, reloading.
